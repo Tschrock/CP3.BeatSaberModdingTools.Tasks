@@ -7,10 +7,21 @@
     </PropertyGroup>
 
     <PropertyGroup>
+        <Version>1.0.1</Version>
         <Product>CP3.BeatSaberModdingTools.Tasks</Product>
         <Description>A set of MSBuild tasks for Beat Saber mods.</Description>
-        <Authors>CyberPon3</Authors>
-        <Version>1.0.1</Version>
+        <Copyright>Copyright © 2020 Tyler Schrock</Copyright>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <IsPackable>true</IsPackable>
+        <Title>CP3.BeatSaberModdingTools.Tasks</Title>
+        <Authors>Tyler Schrock</Authors>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/Tschrock/CP3.BeatSaberModdingTools.Tasks</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/Tschrock/CP3.BeatSaberModdingTools.Tasks.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <DevelopmentDependency>true</DevelopmentDependency>
     </PropertyGroup>
 
     <PropertyGroup>
