@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>8.0</LangVersion>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Product>CP3.BeatSaberModdingTools.Tasks</Product>
+        <Description>A set of MSBuild tasks for Beat Saber mods.</Description>
+        <Authors>CyberPon3</Authors>
+        <Version>1.0.1</Version>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <NoPackageAnalysis>true</NoPackageAnalysis>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <BuildOutputTargetFolder>tasks</BuildOutputTargetFolder>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="CP3.BeatSaberModdingTools.Tasks.props" PackagePath="build\CP3.BeatSaberModdingTools.Tasks.props" />
+        <Content Include="CP3.BeatSaberModdingTools.Tasks.props" PackagePath="buildMultiTargeting\CP3.BeatSaberModdingTools.Tasks.props" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Build.Framework" Version="16.7.0" />
+        <PackageReference Include="Microsoft.Build.Utilities.Core" Version="16.7.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    </ItemGroup>
+
+    <Target Name="PackTaskDependencies" BeforeTargets="GenerateNuspec">
+        <ItemGroup>
+            <_PackageFiles Include="bin\$(Configuration)\*\Newtonsoft.Json.dll">
+                <PackagePath>tasks\%(RecursiveDir)</PackagePath>
+                <Visible>false</Visible>
+                <BuildAction>Content</BuildAction>
+            </_PackageFiles>
+        </ItemGroup>
+    </Target>
+
+</Project>

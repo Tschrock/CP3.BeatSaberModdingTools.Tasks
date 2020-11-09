@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <BSMTTaskAssembly>$(MSBuildThisFileDirectory)..\tasks\netstandard2.0\CP3.BeatSaberModdingTools.Tasks.dll</BSMTTaskAssembly>
+    </PropertyGroup>
+    <UsingTask TaskName="CP3.BeatSaberModdingTools.Tasks.CompareVersions" AssemblyFile="$(BSMTTaskAssembly)" />
+    <UsingTask TaskName="CP3.BeatSaberModdingTools.Tasks.GetAssemblyInfo" AssemblyFile="$(BSMTTaskAssembly)" />
+    <UsingTask TaskName="CP3.BeatSaberModdingTools.Tasks.GetCommitInfo" AssemblyFile="$(BSMTTaskAssembly)" />
+    <UsingTask TaskName="CP3.BeatSaberModdingTools.Tasks.GetManifestInfo" AssemblyFile="$(BSMTTaskAssembly)" />
+    <UsingTask TaskName="CP3.BeatSaberModdingTools.Tasks.IsProcessRunning" AssemblyFile="$(BSMTTaskAssembly)" />
+    <UsingTask TaskName="CP3.BeatSaberModdingTools.Tasks.ReplaceInFile" AssemblyFile="$(BSMTTaskAssembly)" />
+    <UsingTask TaskName="CP3.BeatSaberModdingTools.Tasks.ZipDir" AssemblyFile="$(BSMTTaskAssembly)" />
+</Project>
